@@ -1,0 +1,51 @@
+.card {
+  margin-top: 150px;
+  margin-bottom: 70px;
+  border: none;
+  border-radius: 0%;
+}
+.card__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 50px;
+}
+.card__item {
+  max-width: 350px;
+  border: 1px solid gainsboro;
+  border-radius: 7px;
+  padding: 7px;
+  transition: 0.4s;
+  &:hover {
+    transition: 0.4s;
+    box-shadow: -5px 7px 10px gainsboro;
+  }
+}
+.card__item-img {
+  max-width: 330px;
+  width: 100%;
+}
+.card__item-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 27px;
+  padding-top: 15px;
+}
+.card__item-capital {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.loading {
+  text-align: center;
+  margin-top: 70px;
+}
+@media only screen and (max-width: 495px) {
+  .card {
+    margin-top: 200px;
+  }
+}

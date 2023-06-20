@@ -1,0 +1,32 @@
+.dark {
+  .site-header {
+    background: #202028;
+    transition: 0.3s;
+  }
+  .site-header__menu-btn {
+    color: #fff;
+  }
+  .site-header__close-menu {
+    color: #fff;
+  }
+  .site-header__darkMode-btn {
+    color: #fff;
+  }
+  .site-header__form-btn {
+    background: #fff;
+    &:hover {
+      border-color: #fff;
+      background: black;
+      color: #fff;
+    }
+  }
+  .site-header__menu-list {
+    background: #202028;
+    transition: 0.4s;
+  }
+  .site-header__menu-item-link{
+    color: #fff;
+    padding-bottom: 7px;
+    border-bottom: 1px  dashed #fff;
+  }
+}

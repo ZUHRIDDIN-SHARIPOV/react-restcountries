@@ -1,0 +1,106 @@
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  display: none;
+}
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  backdrop-filter: blur(30px);
+  box-shadow: 0 5px 5px gray;
+}
+.site-header__form {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+}
+.site-header__form-btn {
+  font-size: 18px;
+}
+.site-header__form-searchInput {
+  padding: 10px 0;
+  padding-left: 20px;
+  padding-right: 300px;
+  outline: none;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+}
+.site-header__block {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 30px 0;
+}
+.site-header__menu-list {
+  max-width: 300px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  box-shadow: 0 5px 5px gray;
+  height: 100vh;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 70px;
+  transform: translateY(100%);
+  transition: 0.4s;
+  background: #ffffffd9;
+  z-index: -5;
+}
+.site-header__menu-list.open {
+  transform: translateY(0);
+}
+.site-header__menu-item {
+  padding-bottom: 70px;
+}
+.d-m-list {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+}
+
+@media only screen and (max-width: 861px) {
+  .site-header__form-searchInput {
+    padding-right: 150px;
+    transition: 0.3s;
+  }
+}
+@media only screen and (max-width: 709px) {
+  .site-header__form-searchInput {
+    padding-right: 100px;
+    transition: 0.3s;
+  }
+}
+@media only screen and (max-width: 625px) {
+  .site-header__form-searchInput {
+    padding-right: 0;
+    transition: 0.3s;
+  }
+  .site-header__form {
+    column-gap: 25px;
+  }
+}
+@media only screen and (max-width: 495px) {
+  .site-header__form-searchInput {
+    padding: 8px 0;
+    padding-left: 13px;
+  }
+  .site-header__form-btn {
+    font-size: 16px;
+  }
+  .site-header__form {
+    column-gap: 25px;
+  }
+  .site-header__block {
+    flex-direction: column-reverse;
+  }
+  .d-m-list {
+    margin-bottom: 30px;
+    column-gap: 210px;
+    transition: 0.4s;
+  }
+}
