@@ -43,7 +43,9 @@ const Header = ({ darkMode, checkDark }) => {
       <header className="site-header">
         <div className="container">
           <div className="site-header__block">
-            <form className="site-header__form">
+            <form
+              className="site-header__form"
+              onSubmit={(e) => e.preventDefault()}>
               <input
                 type="search"
                 className="site-header__form-searchInput"
