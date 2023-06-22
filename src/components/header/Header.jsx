@@ -19,13 +19,10 @@ const Header = ({ darkMode, checkDark }) => {
   };
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
-  const fetchData = async () => {
-    if (!search) {
-      var url = `https://restcountries.com/v3.1/all`;
-    } else {
-      const value = search.toLowerCase();
-      var url = `https://restcountries.com/v3.1/name/${value}`;
-    }
+  const [search, setSearch] = useState("");
+
+  var url = `https://restcountries.com/v3.1/all`;
+  const fetchData = async (url) => {
     try {
       setLoading(true);
       const response = await axios.get(url);
@@ -36,22 +33,17 @@ const Header = ({ darkMode, checkDark }) => {
       console.error(error.message);
     }
   };
-  const [search, setSearch] = useState("");
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    fetchData();
-  };
 
   useEffect(() => {
-    fetchData();
-  }, [search]);
+    fetchData(url);
+  }, [url]);
 
   return (
     <>
       <header className="site-header">
         <div className="container">
           <div className="site-header__block">
-            <form className="site-header__form" onSubmit={handleSubmit}>
+            <form className="site-header__form">
               <input
                 type="search"
                 className="site-header__form-searchInput"
@@ -127,7 +119,7 @@ const Header = ({ darkMode, checkDark }) => {
           </ul>
         </div>
       </header>
-      <Card data={data} loading={loading} />
+      <Card data={data} loading={loading} search={search} />
     </>
   );
 };
