@@ -43,9 +43,11 @@ input[type="search"]::-webkit-search-decoration {
   left: 0;
   box-shadow: 0 5px 5px gray;
   height: 100vh;
-  padding-top: 50px;
+  margin-top: 15px;
+  padding-top: 80px;
   padding-bottom: 50px;
   padding-left: 70px;
+  border-top-right-radius: 10px;
   transform: translateY(100%);
   transition: 0.4s;
   background: #ffffffd9;
