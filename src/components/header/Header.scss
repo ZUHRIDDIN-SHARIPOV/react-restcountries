@@ -42,15 +42,15 @@ input[type="search"]::-webkit-search-decoration {
   position: fixed;
   left: 0;
   box-shadow: 0 5px 5px gray;
+  background: #ffffff;
   height: 100vh;
+  border-top-right-radius: 10px;
   margin-top: 15px;
   padding-top: 80px;
   padding-bottom: 50px;
-  padding-left: 70px;
-  border-top-right-radius: 10px;
+  padding-left: 100px;
   transform: translateY(100%);
   transition: 0.4s;
-  background: #ffffffd9;
   z-index: -5;
 }
 .site-header__menu-list.open {
